@@ -1,10 +1,8 @@
-import { NavLink, OutLet } from 'react-router-dom';
-
+import { NavLink, Outlet } from 'react-router-dom';
 import stl from './layOut.module.css';
 
-const doActive = ({ isActive }) => {
+const doActive = ({ isActive }) =>
   isActive ? `${stl.active} ${stl.link}` : `${stl.link}`;
-};
 
 function LayOut() {
   return (
@@ -21,7 +19,7 @@ function LayOut() {
           </NavLink>
         </li>
       </ul>
-      <OutLet />
+      <Outlet />
     </>
   );
 }

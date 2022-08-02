@@ -20,11 +20,11 @@ function Home() {
       }));
 
       try {
-        const { result } = await getPopularMovies();
+        const { results } = await getPopularMovies();
         setMovies(prevMovies => ({
           ...prevMovies,
           isLoading: false,
-          items: result,
+          items: results,
         }));
       } catch (error) {
         setMovies(prevMovies => ({
@@ -39,7 +39,7 @@ function Home() {
 
   const { items, isLoading, error } = movies;
   return (
-    <div>
+    <div className={stl.movies}>
       {Boolean(items.length) && <MoviesList items={items} />}
       {isLoading && <p>...Loading</p>}
       {error && <p>{error.message}</p>}

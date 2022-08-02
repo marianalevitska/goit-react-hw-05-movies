@@ -1,0 +1,39 @@
+.block{
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.btn {
+    width: 100px;
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid #ff4500;
+    border-radius: 5px;
+    color: #ff4500;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+
+    margin-top: 15px;
+    margin-left: auto;
+}
+
+.link {
+    font-size: larger;
+    font-weight: 700;
+    text-decoration: none;
+    color: #000;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+.link:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #ff4500;
+}

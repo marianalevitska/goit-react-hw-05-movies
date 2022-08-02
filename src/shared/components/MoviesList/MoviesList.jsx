@@ -1,12 +1,12 @@
 import { useLocation } from 'react-router-dom';
+import { memo } from 'react';
 import PropTypes from 'prop-types';
-import MovieItem from './MovieItem';
+import MovieItem from '../MovieItem';
 
 import stl from './moviesList.module.css';
 
 function MoviesList({ items }) {
   const location = useLocation();
-  console.log(location);
   const elements = items.map(item => (
     <MovieItem key={item.id} {...item} from={location} />
   ));
@@ -24,4 +24,4 @@ MoviesList.propTypes = {
   ),
 };
 
-export default MoviesList;
+export default memo(MoviesList);
